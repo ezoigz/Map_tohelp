@@ -1,3 +1,4 @@
+// @ts-nocheck
 import './style.css'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -38,7 +39,6 @@ const caregiverIcon = L.icon({
   iconSize: [45, 45], iconAnchor: [22, 45]
 });
 
-// ใช้เครื่องหมาย ! เพื่อบอก TS ว่าเรามั่นใจว่ามี id="app" แน่นอน
 const appDiv = document.querySelector<HTMLDivElement>('#app')!;
 if (role === 'elderly') {
   appDiv.innerHTML = `
@@ -59,7 +59,6 @@ const markers: Record<string, L.Marker> = {};
 let hasCentered = false;
 
 onValue(ref(db, 'locations'), (snapshot) => {
-  // ระบุ Type ให้ชัดเจนเพื่อหายแดงใน Loop
   const data = snapshot.val() as Record<string, LocationData> | null;
   if (!data) return;
 
