@@ -63,3 +63,7 @@ navigator.geolocation.watchPosition((pos) => {
 }, err => {
   alert("กรุณาเปิด GPS และกดยอมรับการเข้าถึงตำแหน่ง");
 }, { enableHighAccuracy: true });
+// ช่วยให้แผนที่คำนวณขนาดพื้นที่ใหม่เมื่อ CSS โหลดเสร็จ
+setTimeout(() => {
+  map.invalidateSize();
+}, 100);
