@@ -1,0 +1,20 @@
+{
+    "rewrites": [
+        {
+            "source": "/elderly",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/elderly.html",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/dependent",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/dependent.html",
+            "destination": "/index.html"
+        }
+    ]
+}
